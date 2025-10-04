@@ -1,5 +1,6 @@
-import bia_xichquy from "../assets/xichquy/Chapter1/00.jpg"
 import { Link } from "react-router-dom";
+
+const BIA_TRUYEN_PATH = '/images/xichquy/Chapter1/00.jpg'; 
 
 const HomePage = () => {
     return (
@@ -19,7 +20,12 @@ const HomePage = () => {
                         <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-6">
                             <div className="relative rounded-lg overflow-hidden group">
                                 <Link to="/Chap1">
-                                    <img src={bia_xichquy} alt="Bìa truyện" className="w-50 h-70 object-cover transition duration-300 group-hover:scale-105 cursor-pointer" />
+                                    {/* Sửa src thành đường dẫn tuyệt đối đã định nghĩa ở trên */}
+                                    <img 
+                                        src={BIA_TRUYEN_PATH} 
+                                        alt="Bìa truyện Xích Quỷ" 
+                                        className="w-50 h-70 object-cover transition duration-300 group-hover:scale-105 cursor-pointer" 
+                                    />
                                 </Link>
                                 <div className="absolute bottom-0 left-0 p-3 w-full bg-black/70 text-sm font-semibold">
                                     Xích Quỷ: Cái Thế Thần Long
