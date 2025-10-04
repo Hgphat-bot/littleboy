@@ -1,7 +1,7 @@
 
 // Mảng đường dẫn ảnh Chap3
 const images = [
-	'/src/assets/xichquy/Chapter3/00.jpg',
+	'/images/xichquy/Chapter3/00.jpg',
 	'/src/assets/xichquy/Chapter3/01.jpg',
 	'/src/assets/xichquy/Chapter3/02.jpg',
 	'/src/assets/xichquy/Chapter3/03.jpg',
