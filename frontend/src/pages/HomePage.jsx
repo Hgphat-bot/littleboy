@@ -29,7 +29,7 @@ const HomePage = () => {
                         </div>
                     </div>
 
-                    <div className="col-span-full lg:col-span-4 space-y-8 bg-[#0A1128] pl-10 min-h-[calc(100vh-80px)]">
+                    <div className="hidden lg:block col-span-full lg:col-span-4 space-y-8 bg-[#0A1128] pl-10 min-h-[calc(100vh-80px)]">
                         
                         <div className="bg-gray-900 rounded-lg p-5 shadow-2xl">
                             <div className="flex justify-between border-b border-gray-700 pb-3 mb-4">

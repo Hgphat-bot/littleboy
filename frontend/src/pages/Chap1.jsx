@@ -1,6 +1,4 @@
 
-import { Link } from 'react-router-dom';
-// Mảng đường dẫn ảnh Chap1
 const images = [
 	'/src/assets/xichquy/Chapter1/00.jpg',
 	'/src/assets/xichquy/Chapter1/01.jpg',
@@ -38,7 +36,7 @@ const Chap1 = () => {
 	return (
 		<div className="flex flex-col items-center p-4 -space-y-0">
 			{images.map((src, idx) => (
-			<img key={idx} src={src} alt={`Chap1 ${idx}`} className="w-full max-w-[45%] h-auto object-cover shadow" />
+			<img key={idx} src={src} alt={`Chap1 ${idx}`} className="w-full lg:max-w-[45%] h-auto object-cover shadow" />
 			))}
 		</div>
 	);

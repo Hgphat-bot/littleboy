@@ -21,11 +21,10 @@ function FooterConditional() {
 
 
 function App() {
-
   return (
     <>
 
-      
+      <useMobileRedirect/>
 
       <Toaster/>
       <BrowserRouter>
