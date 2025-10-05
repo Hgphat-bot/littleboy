@@ -41,9 +41,9 @@ const StoryDetails = () => {
             <h2 className="text-xl font-semibold border-b border-gray-700 pt-4 pb-2">Các Chương</h2>
             {/* Link đến các chương truyện */}
             <ul className="text-gray-400 space-y-1">
-                <li className="hover:text-red-500 cursor-pointer"><Link to="/Chap1">Chương 1: Khởi Nguyên</Link></li>
-                <li className="hover:text-red-500 cursor-pointer"><Link to="/Chap2">Chương 2: Thức Tỉnh</Link></li>
-                <li className="hover:text-red-500 cursor-pointer"><Link to="/Chap3">Chương 3: Giao Long Hỏa chân long</Link></li>
+                <li className="hover:text-red-500 cursor-pointer"><Link to="/Chap1">Chương 1: Long Thần Tái Thế</Link></li>
+                <li className="hover:text-red-500 cursor-pointer"><Link to="/Chap2">Chương 2: Đại Long Trở Mình</Link></li>
+                <li className="hover:text-red-500 cursor-pointer"><Link to="/Chap3">Chương 3: Giao Long Hảo Chân Long</Link></li>
             </ul>
           </div>
         </div>
