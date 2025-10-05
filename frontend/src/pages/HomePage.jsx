@@ -19,7 +19,7 @@ const HomePage = () => {
                         
                         <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-6">
                             <div className="relative rounded-lg overflow-hidden group">
-                                <Link to="/Chap1">
+                                <Link to="/StoryDetails">
                                     {/* Sửa src thành đường dẫn tuyệt đối đã định nghĩa ở trên */}
                                     <img 
                                         src={BIA_TRUYEN_PATH} 

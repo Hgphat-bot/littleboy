@@ -3,9 +3,11 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 import Header from "./components/Header";
 import Footer from "./components/Footer";
+import ScrollToTop from "./components/ScrollToTop";
 import { useLocation } from 'react-router-dom';
 import HomePage from "./pages/HomePage";
 import NotFound from "./pages/NotFound";
+import StoryDetails from "./pages/StoryDetails";
 import Chap1 from "./pages/Chap1";
 import Chap2 from "./pages/Chap2";
 import Chap3 from "./pages/Chap3";
@@ -28,6 +30,7 @@ function App() {
 
       <Toaster/>
       <BrowserRouter>
+        <ScrollToTop /> 
         <Header/>
 
         <div className="pt-[50px] sm-pt-[56px]">
@@ -36,6 +39,11 @@ function App() {
             <Route
               path="/"
               element={<HomePage />}
+            />
+
+            <Route
+              path="/StoryDetails"
+              element={<StoryDetails />}
             />
 
             <Route
