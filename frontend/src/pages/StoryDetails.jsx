@@ -28,7 +28,7 @@ const StoryDetails = () => {
           <div className="w-full md:w-2/3 space-y-4">
             <h2 className="text-xl font-semibold border-b border-gray-700 pb-2">Tóm tắt</h2>
             <p className="text-gray-300 leading-relaxed">
-              Đây là nơi bạn đặt tóm tắt chi tiết của truyện. Kể về nhân vật chính, bối cảnh, và những điểm hấp dẫn. Tóm tắt nên đủ dài để thu hút người đọc. (Ví dụ: Một thế giới hỗn loạn, nơi rồng thần thức tỉnh sau hàng ngàn năm ngủ yên, và một chàng trai trẻ mang dòng máu Xích Quỷ phải đứng lên bảo vệ nhân loại khỏi sự diệt vong...)
+              Truyện tranh Xích Quỷ: Cái Thế Thần Long được cập nhật nhanh và đầy đủ nhất tại LittleBoy. Bạn đọc đừng quên để lại bình luận và chia sẻ, ủng hộ LittleBoy ra các chương mới nhất của truyện Xích Quỷ: Cái Thế Thần Long.
             </p>
             
             <div className="pt-4 space-y-2">
