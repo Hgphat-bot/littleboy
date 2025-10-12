@@ -13,6 +13,7 @@ import Chap2 from "./pages/Chap2";
 import Chap3 from "./pages/Chap3";
 import Chap4 from "./pages/Chap4";
 import Chap5 from "./pages/Chap5";
+import Chap6 from "./pages/Chap6";
 
 function FooterConditional() {
   const location = useLocation();
@@ -71,6 +72,11 @@ function App() {
             <Route
               path="/chap5"
               element={<Chap5 />}
+            />
+
+            <Route
+              path="/chap6"
+              element={<Chap6 />}
             />
 
             <Route
