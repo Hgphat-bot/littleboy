@@ -47,6 +47,7 @@ const StoryDetails = () => {
                 <li className="hover:text-red-500 cursor-pointer"><Link to="/Chap4">Chương 4: Thanh sơn học hải</Link></li>
                 <li className="hover:text-red-500 cursor-pointer"><Link to="/Chap5">Chương 5: Cửu Vĩ Hồ</Link></li>
                 <li className="hover:text-red-500 cursor-pointer"><Link to="/Chap6">Chương 6: Tiều phu đốn yêu</Link></li>
+                <li className="hover:text-red-500 cursor-pointer"><Link to="/Chap7">Chương 7: Lạc Long Vương</Link></li>
             </ul>
           </div>
         </div>

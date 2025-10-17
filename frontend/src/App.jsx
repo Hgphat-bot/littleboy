@@ -80,6 +80,11 @@ function App() {
             />
 
             <Route
+              path="/chap7"
+              element={<Chap7 />}
+            />
+
+            <Route
               path="*"
               element={<NotFound />}
             />  
