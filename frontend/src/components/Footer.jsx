@@ -3,7 +3,7 @@ import { useState, useEffect, useRef } from 'react';
 
 const Footer = () => {
   const location = useLocation();
-  const routes = ['/chap1', '/chap2', '/chap3', '/chap4', '/chap5', '/chap6'];
+  const routes = ['/chap1', '/chap2', '/chap3', '/chap4', '/chap5', '/chap6', '/chap7'];
   // normalize pathname (remove trailing slash) to match routes like /chap1
   const pathname = location.pathname.replace(/\/$/, '').toLowerCase();
   const idx = routes.indexOf(pathname);

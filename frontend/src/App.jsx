@@ -14,6 +14,7 @@ import Chap3 from "./pages/Chap3";
 import Chap4 from "./pages/Chap4";
 import Chap5 from "./pages/Chap5";
 import Chap6 from "./pages/Chap6";
+import Chap7 from ",.pages/Chap7";
 
 function FooterConditional() {
   const location = useLocation();
