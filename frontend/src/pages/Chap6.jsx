@@ -1,5 +1,5 @@
+import AutoPageNav from "../components/AutoPageNav";
 
-// Mảng đường dẫn ảnh Chap3
 const images = [
 	'/images/xichquy/Chapter6/00.jpg',
     '/images/xichquy/Chapter6/01.jpg',
@@ -45,12 +45,19 @@ const images = [
 ];
 
 const Chap6 = () => {
-	return (
-		<div className="flex flex-col items-center p-4 -space-y-0">
-			{images.map((src, idx) => (
-			<img key={idx} src={src} alt={`Chap6 ${idx}`} className="w-full lg:max-w-[45%] h-auto object-cover shadow" />
-			))}
-		</div>
+    return (
+        <AutoPageNav>
+            <div className="flex flex-col items-center p-4 -space-y-0">
+                {images.map((src, idx) => (
+                    <img
+                        key={idx}
+                        src={src}
+                        alt={`Chap6 ${idx}`}
+                        className="w-full lg:max-w-[45%] h-auto object-cover shadow"
+                    />
+                ))}
+            </div>
+        </AutoPageNav>
 	);
 };
 

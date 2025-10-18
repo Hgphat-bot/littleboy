@@ -1,3 +1,4 @@
+import AutoPageNav from "../components/AutoPageNav";
 
 const images = [
 	'/images/xichquy/Chapter1/00.jpg',
@@ -33,13 +34,20 @@ const images = [
 ];
 
 const Chap1 = () => {
-	return (
-		<div className="flex flex-col items-center p-4 -space-y-0">
-			{images.map((src, idx) => (
-			<img key={idx} src={src} alt={`Chap1 ${idx}`} className="w-full lg:max-w-[45%] h-auto object-cover shadow" />
-			))}
-		</div>
-	);
+    return (
+        <AutoPageNav>
+            <div className="flex flex-col items-center p-4 -space-y-0">
+                {images.map((src, idx) => (
+                    <img
+                        key={idx}
+                        src={src}
+                        alt={`Chap1 ${idx}`}
+                        className="w-full lg:max-w-[45%] h-auto object-cover shadow"
+                    />
+                ))}
+            </div>
+        </AutoPageNav>
+    );
 };
 
 export default Chap1;
