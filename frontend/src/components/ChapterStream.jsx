@@ -1,4 +1,5 @@
 import { useEffect, useRef, useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 const chapterLoaders = [
   () => import("../pages/Chap1.jsx"),
@@ -11,17 +12,20 @@ const chapterLoaders = [
 ];
 
 export default function ChapterStream({ start = 1 }) {
+  const navigate = useNavigate();
   const total = chapterLoaders.length;
-  const startIndex = Math.max(1, Math.min(start, total)); // clamp
-  const [loadedCount, setLoadedCount] = useState(startIndex); // loaded up to this index (inclusive)
-  const [components, setComponents] = useState(Array(total + 1).fill(null)); // 1-based
+  const startIndex = Math.max(1, Math.min(start, total));
+  const [loadedCount, setLoadedCount] = useState(startIndex);
+  const [components, setComponents] = useState(Array(total + 1).fill(null));
   const sentinelRef = useRef(null);
   const obsRef = useRef(null);
+  const sectionObserverRef = useRef(null);
+  const sectionRefs = useRef({});
+  const [currentVisible, setCurrentVisible] = useState(startIndex);
 
-  // load a chapter component (1-based)
   const loadChapter = (i) => {
     if (i < 1 || i > total) return;
-    if (components[i]) return; // already loaded
+    if (components[i]) return;
     chapterLoaders[i - 1]().then((mod) => {
       const Comp = mod.default || mod;
       setComponents((prev) => {
@@ -32,15 +36,13 @@ export default function ChapterStream({ start = 1 }) {
     });
   };
 
-  // on startIndex change (navigating directly to another chapter), reset loadedCount
   useEffect(() => {
     setLoadedCount(startIndex);
-    // optionally preload the start one immediately
     loadChapter(startIndex);
+    navigate(`/chap${startIndex}`, { replace: true });
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [startIndex]);
 
-  // load currently required chapters up to loadedCount
   useEffect(() => {
     for (let i = startIndex; i <= loadedCount; i++) {
       loadChapter(i);
@@ -48,7 +50,6 @@ export default function ChapterStream({ start = 1 }) {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [loadedCount, startIndex]);
 
-  // intersection observer to increment loadedCount when sentinel becomes visible
   useEffect(() => {
     if (obsRef.current) obsRef.current.disconnect();
     obsRef.current = new IntersectionObserver(
@@ -64,7 +65,7 @@ export default function ChapterStream({ start = 1 }) {
       },
       {
         root: null,
-        rootMargin: "200px", // preload a bit earlier
+        rootMargin: "200px",
         threshold: 0.1,
       }
     );
@@ -74,13 +75,65 @@ export default function ChapterStream({ start = 1 }) {
     return () => obsRef.current && obsRef.current.disconnect();
   }, [sentinelRef, total]);
 
+  useEffect(() => {
+    if (sectionObserverRef.current) {
+      sectionObserverRef.current.disconnect();
+      sectionObserverRef.current = null;
+    }
+
+    sectionObserverRef.current = new IntersectionObserver(
+      (entries) => {
+        let best = null;
+        for (const e of entries) {
+          if (!e.isIntersecting) continue;
+          if (!best || e.intersectionRatio > best.intersectionRatio) {
+            best = e;
+          }
+        }
+        if (best) {
+          const idx = Number(best.target.getAttribute("data-chap-index"));
+          if (idx && idx !== currentVisible) {
+            setCurrentVisible(idx);
+            navigate(`/chap${idx}`, { replace: true });
+          }
+        }
+      },
+      {
+        root: null,
+        threshold: [0.25, 0.5, 0.75],
+      }
+    );
+
+    // observe all rendered section elements
+    for (let i = startIndex; i <= loadedCount; i++) {
+      const el = sectionRefs.current[i];
+      if (el) sectionObserverRef.current.observe(el);
+    }
+
+    return () => {
+      if (sectionObserverRef.current) sectionObserverRef.current.disconnect();
+    };
+    // re-run when loadedCount changes so new sections get observed
+  }, [loadedCount, startIndex, navigate, currentVisible]);
+
+  const setSectionRef = (i) => (el) => {
+    if (el) sectionRefs.current[i] = el;
+    else delete sectionRefs.current[i];
+  };
+
   return (
     <div>
       {Array.from({ length: loadedCount - startIndex + 1 }, (_, idx) => {
         const chapIndex = startIndex + idx;
         const Comp = components[chapIndex];
         return (
-          <section key={chapIndex} id={`chap-${chapIndex}`} style={{ marginBottom: 40 }}>
+          <section
+            key={chapIndex}
+            id={`chap-${chapIndex}`}
+            data-chap-index={chapIndex}
+            ref={setSectionRef(chapIndex)}
+            style={{ marginBottom: 40 }}
+          >
             {Comp ? <Comp /> : <div style={{ padding: 40, textAlign: "center" }}>Đang tải chương {chapIndex}…</div>}
           </section>
         );
