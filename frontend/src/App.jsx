@@ -1,6 +1,7 @@
 import { Toaster } from "sonner";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
+import ChapterStream from "./components/ChapterStream";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 import ScrollToTop from "./components/ScrollToTop";
@@ -52,37 +53,37 @@ function App() {
 
             <Route
               path="/chap1"
-              element={<Chap1 />}
+              element={<ChapterStream start={1} />}
             />
 
             <Route
               path="/chap2"
-              element={<Chap2 />}
+              element={<ChapterStream start={2} />}
             />
 
             <Route
               path="/chap3"
-              element={<Chap3 />}
+              element={<ChapterStream start={3} />}
             />
 
             <Route
               path="/chap4"
-              element={<Chap4 />}
+              element={<ChapterStream start={4} />}
             />
 
             <Route
               path="/chap5"
-              element={<Chap5 />}
+              element={<ChapterStream start={5} />}
             />
 
             <Route
               path="/chap6"
-              element={<Chap6 />}
+              element={<ChapterStream start={6} />}
             />
 
             <Route
               path="/chap7"
-              element={<Chap7 />}
+              element={<ChapterStream start={7} />}
             />
 
             <Route

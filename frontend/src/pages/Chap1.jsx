@@ -1,4 +1,3 @@
-import AutoPageNav from "../components/AutoPageNav";
 
 const images = [
 	'/images/xichquy/Chapter1/00.jpg',
@@ -35,7 +34,6 @@ const images = [
 
 const Chap1 = () => {
     return (
-        <AutoPageNav>
             <div className="flex flex-col items-center p-4 -space-y-0">
                 {images.map((src, idx) => (
                     <img
@@ -46,7 +44,6 @@ const Chap1 = () => {
                     />
                 ))}
             </div>
-        </AutoPageNav>
     );
 };
 
