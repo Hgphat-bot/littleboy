@@ -1,5 +1,5 @@
 <h1 align="center">
-  <img src="https://cdn.discordapp.com/attachments/858893144342659082/1430559074147369000/logo.jpg?ex=68fa3775&is=68f8e5f5&hm=fbcac02f811318c841abb387859329555edbc43b232e54da1a7cffdea4ffad72" alt="little-boy icon"/>
+  <img src="https://cdn.discordapp.com/attachments/858893144342659082/1430577784064839721/logo.png?ex=68fa48e2&is=68f8f762&hm=3aef201af0810c5612d33b833f63a576d44b7641378d6688dd2efb74df2e9ce9" alt="little-boy icon" width="10%"/>
   <br>
   ☢ LITTLE BOY - 12A6
 </h1>
