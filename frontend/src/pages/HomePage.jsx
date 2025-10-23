@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 
-const BIA_TRUYEN_PATH = '/images/xichquy/Chapter1/00.jpg'; 
+const BIA_TRUYEN_PATH = '/images/xichquy/cover.jpg'; 
 
 const HomePage = () => {
     return (
