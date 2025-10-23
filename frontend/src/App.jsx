@@ -9,13 +9,6 @@ import { useLocation } from 'react-router-dom';
 import HomePage from "./pages/HomePage";
 import NotFound from "./pages/NotFound";
 import StoryDetails from "./pages/StoryDetails";
-import Chap1 from "./pages/Chap1";
-import Chap2 from "./pages/Chap2";
-import Chap3 from "./pages/Chap3";
-import Chap4 from "./pages/Chap4";
-import Chap5 from "./pages/Chap5";
-import Chap6 from "./pages/Chap6";
-import Chap7 from "./pages/Chap7";
 
 function FooterConditional() {
   const location = useLocation();

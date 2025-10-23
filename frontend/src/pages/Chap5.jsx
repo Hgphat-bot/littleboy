@@ -1,3 +1,4 @@
+import LazyImage from '../components/LazyImage';
 
 const images = [
 	'/images/xichquy/Chapter5/00.jpg',
@@ -42,7 +43,7 @@ const Chap5 = () => {
 	return (
             <div className="flex flex-col items-center p-4 -space-y-0">
                 {images.map((src, idx) => (
-                    <img
+                    <LazyImage
                         key={idx}
                         src={src}
                         alt={`Chap5 ${idx}`}
