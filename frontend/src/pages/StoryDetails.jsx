@@ -34,8 +34,8 @@ const StoryDetails = () => {
             <div className="pt-4 space-y-2">
                 <p><strong>Tác giả:</strong> Littleboy</p>
                 <p><strong>Thể loại:</strong> Tiên Hiệp, Huyền Huyễn</p>
-                <p><strong>Trạng thái:</strong> Đang cập nhật</p>
-                <p><strong>Đánh giá:</strong> ⭐️⭐️⭐️⭐️ (4.5/5)</p>
+                <p><strong>Trạng thái:</strong> Hoàn thành</p>
+                <p><strong>Đánh giá:</strong> ⭐️⭐️⭐️⭐️⭐ (5/5)</p>
             </div>
             
             <h2 className="text-xl font-semibold border-b border-gray-700 pt-4 pb-2">Các Chương</h2>
