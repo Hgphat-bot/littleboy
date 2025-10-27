@@ -68,6 +68,7 @@ body {
   min-width: 320px;
   min-height: 100vh;
   background-color: #0A1128;
+  overflow-x: hidden;
 }
 
 h1 {
@@ -177,4 +178,36 @@ button:focus-visible {
   --sidebar-accent-foreground: oklch(0.984 0.003 247.858);
   --sidebar-border: oklch(1 0 0 / 10%);
   --sidebar-ring: oklch(0.551 0.027 264.364);
+}
+
+@keyframes fall {
+  0% { transform: translateY(-200px); } 
+  100% { transform: translateY(100vh); } 
+}
+@keyframes shake {
+  0%, 100% { transform: translateX(0); } 
+  50% { transform: translateX(20px); }  
+}
+
+/* 2. LỚP ANIMATION (Sử dụng tên lớp Tailwind thông thường) */
+/* Cần được đặt trong @layer utilities nếu bạn muốn Tailwind nhận diện */
+.animate-snow-fall-slow {
+  animation: fall 20s linear infinite, shake 6s ease-in-out infinite alternate;
+}
+.animate-snow-fall-medium {
+  animation: fall 15s linear infinite, shake 4s ease-in-out infinite alternate;
+}
+.animate-snow-fall-fast {
+  animation: fall 10s linear infinite, shake 6s ease-in-out infinite alternate;
+}
+
+/* 3. LỚP BACKGROUND SIZE */
+.bg-snow-small {
+  background-size: 10px 10px;
+}
+.bg-snow-medium {
+  background-size: 15px 15px;
+}
+.bg-snow-large {
+  background-size: 20px 20px;
 }
