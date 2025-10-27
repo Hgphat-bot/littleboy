@@ -48,7 +48,7 @@ const StoryDetails = () => {
 							<p><strong>Tác giả:</strong> Littleboy</p>
 							<p><strong>Thể loại:</strong> Tiên Hiệp, Huyền Huyễn</p>
 							<p><strong>Trạng thái:</strong> Đang cập nhật</p>
-							<p><strong>Đánh giá:</strong> ⭐️⭐️⭐️⭐️ (4.5/5)</p>
+							<p><strong>Đánh giá:</strong> ⭐️⭐️⭐️⭐️⭐️ (5/5)</p>
 						</div>
 						
 						{/* Danh sách Chương */}
