@@ -1,6 +1,10 @@
 import { Link } from "react-router-dom";
 
+<<<<<<< HEAD
 const BIA_TRUYEN_PATH = '/images/xichquy/cover.jpg'; 
+=======
+const BIA_TRUYEN_PATH = '/images/cover.jpg'; 
+>>>>>>> d98f8b773180f9a66defbfdc590180bf1a430cba
 
 const HomePage = () => {
     return (
@@ -29,7 +33,7 @@ const HomePage = () => {
                                 </Link>
                                 <div className="absolute bottom-0 left-0 p-3 w-full bg-black/70 text-sm font-semibold">
                                     Xích Quỷ: Cái Thế Thần Long
-                                    <div className="text-xs text-gray-400">Đã hoàn thành</div>
+                                    <div className="text-xs text-gray-400">Chương mới nhất</div>
                                 </div>
                             </div>
                         </div>
@@ -55,17 +59,7 @@ const HomePage = () => {
                         </div>
 
                         <div className="bg-gray-900 rounded-lg p-5 shadow-2xl">
-                            <div className="flex justify-between border-b border-gray-700 pb-3 mb-4">
-                                <h3 className="text-lg font-bold mb-4">TRUYỆN ĐỀ CỬ</h3>
-                            </div>
-                            <div className="space-y-3">
-                                <div className="flex items-center text-sm">
-                                    <span className="w-4 font-bold text-red-500 mr-2">1</span>
-                                    <div>
-                                        <p><Link to="/StoryDetails">Xích Quỷ: Cái Thế Thần Long</Link></p>
-                                    </div>
-                                </div>
-                            </div>
+                            <h3 className="text-lg font-bold mb-4">TRUYỆN ĐỀ CỬ</h3>
                         </div>
                     </div>
                 </div>
