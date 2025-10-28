@@ -1,6 +1,6 @@
 import { useState, useEffect, useCallback } from 'react';
 import { Link } from "react-router-dom";
-import logo from '../assets/logo.png';
+import logo from '../assets/logo.ico';
 import search_icon from '../assets/search-b.png'
 
 const Header = () => {
