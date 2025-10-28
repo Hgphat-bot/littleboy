@@ -34,7 +34,6 @@ const images = [
 
 const Chap1 = () => {
     return (
-			<title>XichQuy - CHAPTER: 1</title>
             <div className="flex flex-col items-center p-4 -space-y-0">
                 {images.map((src, idx) => (
                     <img
