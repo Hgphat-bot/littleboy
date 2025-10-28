@@ -1,4 +1,6 @@
 import { Link } from "react-router-dom";
+import Snowfall from "../components/Snowfall";
+import Snowman from "../components/Snowman";
 
 // Định nghĩa đường dẫn (path) tuyệt đối đến ảnh bìa truyện
 const BIA_TRUYEN_PATH = '/images/xichquy/cover.jpg';
@@ -8,6 +10,10 @@ const HomePage = () => {
 	return (
 		// Container chính của trang: màu chữ trắng, chiều cao tối thiểu bằng màn hình, padding top để tránh Header cố định
 		<div className="text-white min-h-screen pt-[80px]"> 
+			{/* Hiệu ứng tuyết rơi */}
+			<Snowfall />
+			{/* Người tuyết ở góc dưới bên phải */}
+			<Snowman />
 			<div className="w-full px-4 py-8">
 				
 				{/* Phần Bộ lọc/Phân loại (Tags) */}

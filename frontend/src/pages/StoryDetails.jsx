@@ -1,5 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import Snowfall from "../components/Snowfall";
+import Snowman from "../components/Snowman";
 // Import đường dẫn ảnh bìa truyện
 import bia_xichquy from '/images/xichquy/cover.jpg';
 
@@ -8,6 +10,10 @@ const StoryDetails = () => {
 	return (
 		// Container chính: Đảm bảo chiều cao tối thiểu bằng màn hình, có padding trên để tránh Header cố định
 		<div className="text-white pt-[80px] p-4 md:p-10 min-h-screen bg-black">
+			{/* Hiệu ứng tuyết rơi */}
+			<Snowfall />
+			{/* Người tuyết ở góc dưới bên phải */}
+			<Snowman />
 			{/* Giới hạn chiều rộng nội dung và căn giữa */}
 			<div className="max-w-4xl mx-auto">
 				{/* Tiêu đề truyện */}
