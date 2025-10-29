@@ -12,8 +12,6 @@ const StoryDetails = () => {
 		<div className="text-white pt-[80px] p-4 md:p-10 min-h-screen bg-black">
 			{/* Hiệu ứng tuyết rơi */}
 			<Snowfall />
-			{/* Người tuyết ở góc dưới bên phải */}
-			<Snowman />
 			{/* Giới hạn chiều rộng nội dung và căn giữa */}
 			<div className="max-w-4xl mx-auto">
 				{/* Tiêu đề truyện */}
